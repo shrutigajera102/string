@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>ENTER VALUE</h1>
+        <input id="value" type="text">
+        <button class="bt" onclick="capitalize()">capitalize</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function capitalize() {
+            const str = document.getElementById("value").value;
+            const words = str.split(" ");
+            const capitalizedWords = words.map(word => {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            });
+            const capitalizedString = capitalizedWords.join(" ");
+            document.getElementById("result").innerHTML = capitalizedString;
+        }
+    </script>
+</body>
+
+</html>
